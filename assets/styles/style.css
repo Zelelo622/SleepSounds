@@ -91,3 +91,109 @@ body {
 .header__link {
   color: #fff;
 }
+
+.main {
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 62px;
+}
+
+.title__main {
+  font-weight: 700;
+  font-size: 100px;
+  margin-bottom: 32px;
+}
+
+.title__descr {
+  font-size: 30px;
+}
+
+.player {
+  text-align: center;
+  margin-bottom: 62px;
+}
+
+.player__btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.play {
+  height: 5rem;
+  width: 5rem;
+  border-left: 4.5rem solid #fff;
+  border-top: 2.5rem solid transparent;
+  border-bottom: 2.5rem solid transparent;
+  border-right: 0 solid #fff;
+}
+
+.pause {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-left: 1.6rem solid #fff;
+  border-right: 1.6rem solid #fff;
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+}
+
+.sound {
+  margin-bottom: 60px;
+}
+
+.sound__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.sound__item {
+}
+
+.sound__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sound__btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.sound__img {
+  width: 124px;
+  height: 124px;
+}
+
+.sound__title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.sliderAmbient {
+  width: auto;
+}
+
+.sliderAmbient::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.sliderAmbient::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.aboutTitle {
+  margin-top: 40px;
+}
