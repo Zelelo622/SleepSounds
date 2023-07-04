@@ -4,9 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sleep Sounds</title>
+    <link rel="stylesheet" href="assets/styles/reset.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__volume">
+            <span class="sliderContainer">
+              <input type="range" min="0" max="1" step="0.01" class="slider" />
+            </span>
+            <button class="volumeBtn btn">Отключить звук</button>
+          </div>
+          <nav class="header__nav">
+            <a href="#!" class="header__link">О проекте</a>
+          </nav>
+        </div>
+      </div>
+    </header>
     <script src="js/main.js"></script>
   </body>
 </html>
