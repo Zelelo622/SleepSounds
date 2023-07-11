@@ -20,6 +20,8 @@ body {
 .btn {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  color: #000;
+  cursor: pointer;
 }
 
 .header {

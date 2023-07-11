@@ -13,7 +13,7 @@
         <div class="header__inner">
           <div class="header__volume">
             <span class="sliderContainer">
-              <input type="range" min="0" max="1" step="0.01" class="slider" />
+              <input type="range" min="0" max="1" step="0.01" value="1" class="slider" />
             </span>
             <button class="volumeBtn btn">Отключить звук</button>
           </div>
@@ -44,7 +44,7 @@
           <div class="sound__list">
             <div class="sound__item">
               <div class="sound__inner">
-                <button class="sound__btn">
+                <button class="sound__btn btn">
                   <img class="sound__img" src="assets/img/rain.svg" alt="Дождь" />
                 </button>
                 <h3 class="sound__title">Дождь</h3>
@@ -54,14 +54,17 @@
                     min="0"
                     max="1"
                     step="0.01"
+                    value=0
                     class="slider sliderAmbient"
+                    id="slider-1"
                   />
                 </span>
               </div>
+              <div class="sound__music"></div>
             </div>
             <div class="sound__item">
               <div class="sound__inner">
-                <button class="sound__btn">
+                <button class="sound__btn btn">
                   <img class="sound__img" src="assets/img/thunder.svg" alt="Дождь" />
                 </button>
                 <h3 class="sound__title">Гром</h3>
@@ -71,14 +74,17 @@
                     min="0"
                     max="1"
                     step="0.01"
+                    value=0
                     class="slider sliderAmbient"
+                    id="slider-2"
                   />
                 </span>
               </div>
+              <div class="sound__music"></div>
             </div>
             <div class="sound__item">
               <div class="sound__inner">
-                <button class="sound__btn">
+                <button class="sound__btn btn">
                   <img class="sound__img" src="assets/img/fire.svg" alt="Дождь" />
                 </button>
                 <h3 class="sound__title">Огонь</h3>
@@ -88,10 +94,13 @@
                     min="0"
                     max="1"
                     step="0.01"
+                    value=0
                     class="slider sliderAmbient"
+                    id="slider-3"
                   />
                 </span>
               </div>
+              <div class="sound__music"></div>
             </div>
           </div>
         </div>
