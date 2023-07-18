@@ -3,6 +3,8 @@ const playBtn = document.querySelector("#playMainBtn");
 const playBtnIcon = document.querySelector(
   "#playMainBtn .play, #playMainBtn .pause"
 );
+const globalVolumeSlider = document.querySelector("#globalVolumeSlider");
+const globalVolumeBtn = document.querySelector("#globalVolumeBtn");
 
 const musicMap = {
   "slider-1": "assets/music/glue-rain.mp4",
@@ -11,6 +13,7 @@ const musicMap = {
 };
 
 let soundMusicElements = [];
+let globalVolume = 1;
 
 function playMusic() {
   if (playBtnIcon.classList.contains("pause")) {
@@ -41,15 +44,47 @@ function updateMusic(e) {
     audioElement = musicContainer.querySelector("audio");
     soundMusicElements.push(audioElement);
   }
-  audioElement.volume = sliderValue;
+  audioElement.volume = sliderValue * globalVolume;
 
   if (playBtnIcon.classList.contains("pause")) {
     audioElement.play();
   }
 }
 
+function updateGlobalVolume() {
+  let globalVolume = parseFloat(globalVolumeSlider.value);
+
+  soundMusicElements.forEach((audio) => {
+    audio.volume =
+      (audio.volume / globalVolumeSlider.previousGlobalVolume) * globalVolume;
+  });
+  globalVolumeSlider.previousGlobalVolume = globalVolume;
+}
+
+let isMuted = false;
+function muteVolume() {
+  isMuted = !isMuted; 
+
+  if (isMuted) {
+    globalVolumeBtn.textContent = "Включить звук";
+    soundMusicElements.forEach((audio) => {
+      audio.muted = true; 
+    });
+  } else {
+    globalVolumeBtn.textContent = "Отключить звук";
+    soundMusicElements.forEach((audio) => {
+      audio.muted = false; 
+    });
+  }
+}
+
 sliders.forEach((slider) => {
   slider.addEventListener("input", updateMusic);
 });
+
+globalVolumeBtn.addEventListener("click", muteVolume);
+
+globalVolumeSlider.addEventListener("input", updateGlobalVolume);
+globalVolumeSlider.previousGlobalVolume = globalVolume;
 
 playBtn.addEventListener("click", playMusic);
