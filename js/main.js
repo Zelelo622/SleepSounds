@@ -49,6 +49,9 @@ function updateMusic(e) {
   if (playBtnIcon.classList.contains("pause")) {
     audioElement.play();
   }
+  if (globalVolumeBtn.textContent === "Включить звук") {
+    audioElement.muted = true;
+  }
 }
 
 function updateGlobalVolume() {
