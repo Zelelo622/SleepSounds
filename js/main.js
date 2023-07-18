@@ -10,6 +10,7 @@ const musicMap = {
   "slider-1": "assets/music/glue-rain.mp4",
   "slider-2": "assets/music/glue-thunder.mp4",
   "slider-3": "assets/music/main-fire.mp4",
+  "slider-4": "assets/music/main-crickets.mp4",
 };
 
 let soundMusicElements = [];
